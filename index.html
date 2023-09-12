@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta name="next-font-preconnect"/>
+    <meta charSet="utf-8"/>
+    <meta name="renderer" content="webkit"/>
+    <title>东方互联</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/><meta name="google-site-verification" content="lQ2I7S_z5wwShi33y43MBD12imFBHWfGf0P7DSsH7hY"/>
+    <meta name="baidu-site-verification" content="oazBFy8AW0"/>
+    <link rel="icon" href="favicon.ico"/>
+    <meta name="description" content="！"/>
+    <meta name="keywords" content="东方互联,VPN,翻墙,外网,youtube,ins,telegram,google,留学"/>
+    <script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js">
+
+    </script>
+    <script>window.aegis = new Aegis({
+      id: '',
+      uin: '', // 用户唯一标识（可选）
+      reportApiSpeed: true, // 接口测速
+      reportAssetSpeed: true, // 静态资源测速
+      beforeRequest: function(data) {
+        if (data.logType === 'log') {
+          var logMsg = data.logs.msg;
+          if (logMsg.includes('beacon.qq.com') || logMsg.includes('trace.qq.com')) {
+            return false;
+          }
+        }
+        if (data.logType === 'speed') {
+          var logUrl = data.logs.url;
+          if (logUrl.includes('beacon.qq.com') || logUrl.includes('trace.qq.com')) {
+            return false;
+          }
+        }
+      },
+      api: {
+        retCodeHandler: function(data, url) {
+          // data 是string类型，如果需要对象需要手动parse下
+          // url 为请求url
+          // 处理灯塔请求retCode异常
+          if (url.includes('beacon.qq.com')) {
+            let resData = {
+              result: -1,
+              msg: '',
+            }
+            try {
+              resData = JSON.parse(data);
+            } catch(e) {}
+    
+            return {
+              isErr: resData.result !== 200 || resData.msg !== 'success',
+              code: resData.result
+            }
+          }
+        }
+      }
+    });</script>
+    <meta name="next-head-count" content="11"/>
+    <link rel="preload" href="_next/static/css/e24de78379d2a145.css" as="style"/>
+    <link rel="stylesheet" href="_next/static/css/e24de78379d2a145.css" data-n-g=""/><link rel="preload" href="_next/static/css/54efb8ffc7855d55.css" as="style"/>
+    <link rel="stylesheet" href="_next/static/css/54efb8ffc7855d55.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script>
+    <script src="https://ssl.captcha.qq.com/TCaptcha.js" defer="" data-nscript="beforeInteractive"></script>
+    <script src="_next/static/chunks/webpack-6a6717390c6c11ff.js" defer=""></script>
+    <script src="_next/static/chunks/framework-91d7f78b5b4003c8.js" defer=""></script>
+    <script src="_next/static/chunks/main-eca793bd23550e04.js" defer=""></script>
+    <script src="_next/static/chunks/pages/_app-04c50eb693c4f644.js" defer=""></script>
+    <script src="_next/static/chunks/959-b04ebac15ade3b91.js" defer=""></script>
+    <script src="_next/static/chunks/957-3d9f8dc9b4599886.js" defer=""></script>
+    <script src="_next/static/chunks/pages/index-0e7c3e389f06f5a7.js" defer=""></script>
+    <script src="_next/static/WiSL1ZTQaJGfU32Yrmw6e/_buildManifest.js" defer=""></script>
+    <script src="_next/static/WiSL1ZTQaJGfU32Yrmw6e/_ssgManifest.js" defer=""></script>
+    <script src="_next/static/WiSL1ZTQaJGfU32Yrmw6e/_middlewareManifest.js" defer=""></script>
+  </head>
+  <body>
+    <div id="__next" data-reactroot="">
+      <div class="header_header__VpNVq header_opacity5__eJ7Fo">
+        <div class="header_container__y_TPQ">
+          <div class="header_logo__Am_HP">
+            <i class="header_logo__Am_HP"></i>
+          </div>
+          <div class="header_pos__9go6F"></div>
+          <div class="header_menu__24gJ2">
+            <div class="header_menuItemWrapper__2qBg9">
+              <span class="header_menuItem__Zx9ir header_dropdown__6RIyQ">产品</span>
+              <div class="szh-menu-container szh-menu-container--itemTransition" style="position:absolute">
+                <ul role="menu" aria-label="Menu" tabindex="-1" class="szh-menu szh-menu--state-closed szh-menu--dir-bottom header_subMenuList__sJReS" style="margin:0;display:none;position:absolute;left:0;top:0">
+                  <li tabindex="-1" style="position:absolute;left:0;top:0;display:block;outline:none" aria-hidden="true" role="menuitem"></li>
+                  <li role="presentation"><a href="https://pinyin.sougou.com/windows/?r=mac&amp;t=pinyin" role="menuitem" tabindex="-1" target="_blank" class="szh-menu__item szh-menu__item--anchor header_subMenu__adOiy">输入法Win版</a></li>
+                  <li role="presentation"><a href="https://shouji.sougou.com" role="menuitem" tabindex="-1" target="_blank" class="szh-menu__item szh-menu__item--anchor header_subMenu__adOiy">输入法手机版</a></li>
+                  <li role="presentation"><a href="https://pinyin.sougou.com/mac/" role="menuitem" tabindex="-1" target="_blank" class="szh-menu__item szh-menu__item--anchor header_subMenu__adOiy">输入法Mac版</a></li>
+                  <li role="presentation"><a href="https://pinyin.sougou.com/linux" role="menuitem" tabindex="-1" target="_blank" class="szh-menu__item szh-menu__item--anchor header_subMenu__adOiy">输入法Linux版</a></li>
+                  <li role="presentation"><a href="https://wubi.sougou.com" role="menuitem" tabindex="-1" target="_blank" class="szh-menu__item szh-menu__item--anchor header_subMenu__adOiy">五笔输入法</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="header_menuItemWrapper__2qBg9">
+              <a href="https://t.me/dongfanghulian" class="header_menuItem__Zx9ir">加入Telegram群</a>
+            </div>
+            <div class="header_menuItemWrapper__2qBg9">
+              <span class="header_menuItem__Zx9ir">皮肤表情创作</span>
+            </div>
+            <div class="header_connectUs__Kx4HF">
+              <a href="feedback.html" target="_blank" rel="noreferrer">联系合作</a>
+            </div>
+          </div>
+          <div class="header_menuMobile__7y2L0">
+            <div class="header_menuWrapper__s1U4L">
+              <i class="header_menuMobileButton__WwAge"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div><div class="download_wrapper__z6VRk">
+        <div class="download_content__yjPEY">
+          <div class="download_bgContainer__IjYMc">
+
+          </div>
+          <div class="download_swiperDownload__hOr5Z">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide download_banner6__P_Vh4 swiper-slide-duplicate" data-swiper-slide-index="5">
+                  <div class="download_swiperContent__v1qnz">
+                    <h1 class="download_title__Qb3DM">写作助手更智能</h1>
+                    <i class="download_animateImage__yDvo0 download_writeImg__z4YgQ"></i>
+                    <i class="download_animateImage__yDvo0 download_icon2__qJiHl"></i>
+                    <i class="download_animateImage__yDvo0 download_icon3__cFpmZ"></i>
+                    <i class="download_animateImage__yDvo0 download_icon4__TwISG"></i>
+                    <i class="download_animateImage__yDvo0 download_icon5__X9G3c"></i>
+                    <i class="download_animateImage__yDvo0 download_icon6__H2_WQ"></i>
+                    <i class="download_animateImage__yDvo0 download_icon7__AkmBA"></i>
+                    <i class="download_animateImage__yDvo0 download_icon8__orNRS"></i>
+                  </div>
+                </div>
+                <div class="swiper-slide download_banner1__RJjzV" data-swiper-slide-index="0">
+                  <div class="download_swiperContent__v1qnz">
+                    <h1 class="download_title__Qb3DM">AI打字准确高效</h1>
+                    <i class="download_animateImage__yDvo0 download_react2_0__wzrNc"></i>
+                    <i class="download_animateImage__yDvo0 download_react2_1__bq6_g"></i>
+                    <i class="download_animateImage__yDvo0 download_sougou__09nu8"></i>
+                    <i class="download_animateImage__yDvo0 download_bubble1__7Y45G"></i>
+                    <i class="download_animateImage__yDvo0 download_bubble2__HAig5"></i>
+                    <i class="download_animateImage__yDvo0 download_react1__TL88t"></i>
+                    <i class="download_animateImage__yDvo0 download_pinyin__r6SWq"></i>
+                    <i class="download_animateImage__yDvo0 download_dacuo__00Zir"></i>
+                    <i class="download_animateImage__yDvo0 download_arrow__cT2dd"></i>
+                    <i class="download_animateImage__yDvo0 download_react3_0__rA_Cq"></i>
+                    <i class="download_animateImage__yDvo0 download_react3_1__OSCNT"></i>
+                  </div>
+                </div>
+                <div class="swiper-slide download_banner2__PS3iE" data-swiper-slide-index="1">
+                  <div class="download_swiperContent__v1qnz">
+                    <h1 class="download_title__Qb3DM">汪仔帮写不词穷</h1>
+                    <i class="download_animateImage__yDvo0 download_react2_2_0__G976r"></i>
+                    <i class="download_animateImage__yDvo0 download_react2_2_1__prJFY"></i>
+                    <i class="download_animateImage__yDvo0 download_paper__Q2e4H"></i>
+                    <i class="download_animateImage__yDvo0 download_write__Rc_cY"></i>
+                    <i class="download_animateImage__yDvo0 download_circle_2_0__AjqKq"></i>
+                    <i class="download_animateImage__yDvo0 download_circle_2_1__RNhJ_"></i>
+                    <i class="download_animateImage__yDvo0 download_circle_2_2__V1p6P"></i>
+                    <i class="download_animateImage__yDvo0 download_circle_2_3__OKXri"></i>
+                    <i class="download_animateImage__yDvo0 download_dog__u3fU3"></i>
+                    <i class="download_animateImage__yDvo0 download_react3_2_0__GuOVF"></i>
+                    <i class="download_animateImage__yDvo0 download_react3_2_1__tbhwe"></i>
+                  </div>
+                </div>
+                <div class="swiper-slide download_banner3__NF0aM" data-swiper-slide-index="2">
+                  <div class="download_swiperContent__v1qnz">
+                    <h1 class="download_title__Qb3DM">
+                      <span class="download_text__i_nai">音频图片秒转文字</span>
+                    </h1>
+                    <i class="download_animateImage__yDvo0 download_react2_3_0__tNOeS"></i>
+                    <i class="download_animateImage__yDvo0 download_react2_3_1__JY3Al"></i>
+                    <i class="download_animateImage__yDvo0 download_sugar__l82Kd"></i>
+                    <i class="download_animateImage__yDvo0 download_bg_3_0___0z32"></i>
+                    <i class="download_animateImage__yDvo0 download_bg_3_1__YR7Vp"></i>
+                    <i class="download_animateImage__yDvo0 download_scan__oAn7n"></i>
+                    <i class="download_animateImage__yDvo0 download_scanResult__G_ltt"></i>
+                    <i class="download_animateImage__yDvo0 download_audio_3_0__J0Zi6"></i>
+                    <i class="download_animateImage__yDvo0 download_react3_3_0__8P2K9"></i>
+                    <i class="download_animateImage__yDvo0 download_react3_3_1__erpxk"></i>
+                  </div>
+                </div>
+                <div class="swiper-slide download_banner4__ia163" data-swiper-slide-index="3">
+                  <div class="download_swiperContent__v1qnz">
+                    <h1 class="download_title__Qb3DM">语音输入精准识别</h1>
+                    <i class="download_animateImage__yDvo0 download_dialog__fj9vy"></i>
+                    <i class="download_animateImage__yDvo0 download_plane__HhoJC"></i>
+                    <i class="download_animateImage__yDvo0 download_transform__9ChST"></i>
+                    <i class="download_animateImage__yDvo0 download_en__fc5J2"></i>
+                    <i class="download_animateImage__yDvo0 download_react3_4_0__AIHHQ"></i>
+                    <i class="download_animateImage__yDvo0 download_react3_4_1__sl7kP"></i>
+                  </div>
+                </div>
+                <div class="swiper-slide download_banner5__cJT50" data-swiper-slide-index="4">
+                  <div class="download_swiperContent__v1qnz">
+                    <h1 class="download_title__Qb3DM">皮肤表情个性丰富</h1>
+                    <i class="download_animateImage__yDvo0 download_react2_5_0__FlNfn"></i>
+                    <i class="download_animateImage__yDvo0 download_react2_5_1__Ds5Dv"></i>
+                    <i class="download_animateImage__yDvo0 download_dialog1__mQgwN"></i>
+                    <i class="download_animateImage__yDvo0 download_skinIcon__BGlZE"></i>
+                    <i class="download_animateImage__yDvo0 download_emoji2__V8ot9"></i>
+                    <i class="download_animateImage__yDvo0 download_skin__fIodJ"></i>
+                    <i class="download_animateImage__yDvo0 download_skin1__YWAQM"></i>
+                    <i class="download_animateImage__yDvo0 download_skin2__3UFIY"></i>
+                    <i class="download_animateImage__yDvo0 download_box__ILbDO"></i>
+                    <i class="download_animateImage__yDvo0 download_react3_5_0__IUa4S"></i>
+                    <i class="download_animateImage__yDvo0 download_react3_5_1__LUI2_"></i>
+                  </div>
+                </div>
+                <div class="swiper-slide download_banner6__P_Vh4" data-swiper-slide-index="5">
+                  <div class="download_swiperContent__v1qnz">
+                    <h1 class="download_title__Qb3DM">写作助手更智能</h1>
+                    <i class="download_animateImage__yDvo0 download_writeImg__z4YgQ"></i>
+                    <i class="download_animateImage__yDvo0 download_icon2__qJiHl"></i>
+                    <i class="download_animateImage__yDvo0 download_icon3__cFpmZ"></i>
+                    <i class="download_animateImage__yDvo0 download_icon4__TwISG"></i>
+                    <i class="download_animateImage__yDvo0 download_icon5__X9G3c"></i>
+                    <i class="download_animateImage__yDvo0 download_icon6__H2_WQ"></i>
+                    <i class="download_animateImage__yDvo0 download_icon7__AkmBA"></i>
+                    <i class="download_animateImage__yDvo0 download_icon8__orNRS"></i>
+                  </div>
+                </div>
+                <div class="swiper-slide download_banner1__RJjzV swiper-slide-duplicate" data-swiper-slide-index="0">
+                  <div class="download_swiperContent__v1qnz">
+                    <h1 class="download_title__Qb3DM">AI打字准确高效</h1>
+                    <i class="download_animateImage__yDvo0 download_react2_0__wzrNc"></i>
+                    <i class="download_animateImage__yDvo0 download_react2_1__bq6_g"></i>
+                    <i class="download_animateImage__yDvo0 download_sougou__09nu8"></i>
+                    <i class="download_animateImage__yDvo0 download_bubble1__7Y45G"></i>
+                    <i class="download_animateImage__yDvo0 download_bubble2__HAig5"></i>
+                    <i class="download_animateImage__yDvo0 download_react1__TL88t"></i>
+                    <i class="download_animateImage__yDvo0 download_pinyin__r6SWq"></i>
+                    <i class="download_animateImage__yDvo0 download_dacuo__00Zir"></i>
+                    <i class="download_animateImage__yDvo0 download_arrow__cT2dd"></i>
+                    <i class="download_animateImage__yDvo0 download_react3_0__rA_Cq"></i>
+                    <i class="download_animateImage__yDvo0 download_react3_1__OSCNT"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="download_downloadPanel__0uK8E">
+            <ul class="download_downloadList__BpP1W">
+              <li class="download_downloadItem__xU_1R">
+                <a href="https://ime-sec.getimg.com/202304072111/93918f3c33cd54ae1829480b189d19ca/pc/build/_sougou_pinyin_%5Brelease_phrases_13_3_c%5D_13.3.0.7048_1111.exe" rel="noreferrer">
+                  <div class="download_itemContent__iGPLA">
+                    <i class="download_iconWrapper__32jxZ download_windows__CfxJi download_hasHover__x9kOO"></i>
+                    <p class="download_text__i_nai">Windows</p>
+                  </div>
+                </a>
+              </li>
+              <li class="download_downloadItem__xU_1R">
+                <a href="https://ime-sec.getimg.com/202304072111/bc8a1303bdcc0d87a999f0e327f8923f/pc/dl/gzindex/1679302101/sougou_mac_guanwang_614c.zip" rel="noreferrer">
+                  <div class="download_itemContent__iGPLA">
+                    <i class="download_iconWrapper__32jxZ download_macOS__q0Ukd download_hasHover__x9kOO"></i>
+                    <p class="download_text__i_nai">macOS</p>
+                  </div>
+                </a>
+              </li>
+              <li class="download_downloadItem__xU_1R">
+                <a href="https://shouji.sougou.com/wap/" rel="noreferrer">
+                  <div class="download_itemContent__iGPLA">
+                    <i class="download_qr__XMdSf"></i><i class="download_iconWrapper__32jxZ download_ios__y8ssq"></i>
+                    <p class="download_text__i_nai">iOS</p>
+                  </div>
+                  <div class="download_qrWrapper__74_La">
+                    <i class="download_qrCode__5DXlv" style="background-image:url(https://ife.getimg.com/public/wap_qr.png)"></i>
+                    <span>扫码下载</span>
+                  </div>
+                </a>
+              </li>
+              <li class="download_downloadItem__xU_1R">
+                <a href="https://shouji.sougou.com/wap/" rel="noreferrer">
+                  <div class="download_itemContent__iGPLA">
+                    <i class="download_qr__XMdSf"></i>
+                    <i class="download_iconWrapper__32jxZ download_android__VFSXe"></i>
+                    <p class="download_text__i_nai">Android</p>
+                  </div>
+                  <div class="download_qrWrapper__74_La">
+                    <i class="download_qrCode__5DXlv" style="background-image:url(https://ife.getimg.com/public/wap_qr.png)"></i>
+                    <span>扫码下载</span>
+                  </div>
+                </a>
+              </li>
+              <li class="download_downloadItem__xU_1R">
+                <a rel="noreferrer">
+                  <div class="download_itemContent__iGPLA">
+                    <i class="download_iconWrapper__32jxZ download_linux__HvN87 download_hasHover__x9kOO"></i>
+                    <p class="download_text__i_nai">Linux 个人版</p>
+                  </div>
+                </a>
+              </li>
+              <li class="download_downloadItem__xU_1R">
+                <a href="https://ime-sec.getimg.com/202304072111/8ba13f4923ceeec02856404db951e857/pc/dl/gzindex/1673505361/sougou-input-harmonyOS-guanwang-20230112.hap" rel="noreferrer">
+                  <div class="download_itemContent__iGPLA">
+                    <i class="download_iconWrapper__32jxZ download_harmony__FQwFB download_hasHover__x9kOO"></i>
+                    <p class="download_text__i_nai">OpenHarmony</p>
+                  </div>
+                </a>
+              </li>
+              <li class="download_downloadItem__xU_1R">
+                <div class="download_itemContent__iGPLA noSelect">
+                  <i class="download_iconWrapper__32jxZ download_more__PBYt3"></i>
+                  <p class="download_text__i_nai">更多下载</p>
+                </div>
+                <ul class="download_itemContentMore__XpbJ_" style="display:none">
+                  <li>
+                    <a href="https://ime-sec.getimg.com/202304072111/f71e1b9157502791436d687b99676678/pc/dl/gzindex/1669814472/sougou_wubi_55d.exe">五笔Win版</a>
+                  </li>
+                  <li>
+                    <a href="https://ime-sec.getimg.com/202304072111/9402fa1a6be9367192e06c3f686517bb/pc/dl/gzindex/1672234906/sougouwubi_mac_guanwang_140.zip">五笔Mac版</a>
+                  </li>
+                  <li>
+                    <a href="https://ime-sec.getimg.com/202304072111/2836cfe490c68b0f20b2da5f82eac7e0/pc/dl/index/1537348926/sougou_yisheng_11a.exe">医生版</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="BScene_wrapper__P8kAd"><div class="BScene_content__e4FJ7">
+        <div class="BScene_titleWrapper__01e12">
+          <h1 class="BScene_title__bhLzA">为B端行业定制</h1>
+          <h1 class="BScene_title__bhLzA">多场景输入方案</h1>
+        </div>
+        <div class="swiper BScene_sceneList__7O6Zg">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide BScene_sceneItem__DRh6q BScene_active__pxKXi">智能办公</div>
+            <div class="swiper-slide BScene_sceneItem__DRh6q">智慧教育</div>
+            <div class="swiper-slide BScene_sceneItem__DRh6q">智能家居</div>
+            <div class="swiper-slide BScene_sceneItem__DRh6q">移动出行</div>
+            <div class="swiper-slide BScene_sceneItem__DRh6q">智能穿戴</div>
+            <div class="swiper-slide BScene_sceneItem__DRh6q">娱乐健身</div>
+            <div class="swiper-slide BScene_sceneItem__DRh6q">智慧金融</div>
+            <div class="swiper-slide BScene_sceneItem__DRh6q">无障碍</div>
+          </div>
+        </div>
+        <div class="BScene_sceneSwiper__aFqvO">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7">
+                <div class="BScene_slide__gnibx">
+                  <div class="BScene_imgPanel__rZ1xW BScene_a11y__qway_">
+                    <i class="BScene_tip__gtBLT BScene_tip_suitableForAging__QZ5lB">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                    <i class="BScene_tip__gtBLT BScene_tip_mutualConversion__YODzS">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                  </div>
+                  <div class="BScene_contentPanel___z9QN BScene_a11yTip__lZvVY">
+                    <h2>无障碍</h2>
+                    <p>搜狗输入法多年钻研老龄、视障、肢障需求，打造长辈模式、视障模式、点点输入（脚部鼠标操作）等能力，可适配多种设备，助厂商符合国标，助用户无碍输入。</p>
+                    <ul class="BScene_sceneItemList__I6kgv">
+                      <li>眼动输入能力开放</li>
+                      <li>界面精简字体放大</li>
+                      <li>手写笔迹加粗</li>
+                      <li>方言精准识别</li>
+                      <li>读屏适配</li>
+                      <li>语音文字互转技术</li>
+                      <li>鼠标输入解决方案</li>
+                    </ul>
+                    <div class="BScene_logoWrapper__b0Z7g">
+                      <i class="BScene_logo__fCkSc BScene_tobii__u_l6h"></i>
+                      <i class="BScene_logo__fCkSc BScene_zhengdu__UxVE8"></i>
+                      <i class="BScene_logo__fCkSc BScene_nvda__QrdEO"></i>
+                      <i class="BScene_logo__fCkSc BScene_yangguang__ckmSX"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-swiper-slide-index="0">
+                <div class="BScene_slide__gnibx">
+                  <div class="BScene_imgPanel__rZ1xW BScene_work__Zozgx">
+                    <i class="BScene_tip__gtBLT BScene_tip_company__YEzz5">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                    <i class="BScene_tip__gtBLT BScene_tip_thesaurus__msMQR">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                  </div>
+                  <div class="BScene_contentPanel___z9QN BScene_workTip__QEc3t">
+                    <h2>智能办公</h2>
+                    <p>针对智能办公场景，完美适配PC、Pad、会议大屏等智能办公终端。根据企业定制需求，打造企业专属词库，植入文化宣导，助力组织效率提升。</p>
+                    <ul class="BScene_sceneItemList__I6kgv">
+                      <li>公司级安全加密</li>
+                      <li>企业专属词库</li>
+                      <li>企业键盘皮肤</li>
+                      <li>9种键盘样式可选</li>
+                      <li>大小屏全支持</li>
+                    </ul>
+                    <div class="BScene_logoWrapper__b0Z7g">
+                      <i class="BScene_logo__fCkSc BScene_lenovo__ry1Kn"></i>
+                      <i class="BScene_logo__fCkSc BScene_philips__Q8aSe"></i>
+                      <i class="BScene_logo__fCkSc BScene_hisense__mNxP9"></i>
+                      <i class="BScene_logo__fCkSc BScene_seevo__tkdYT">
+
+                      </i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-swiper-slide-index="1">
+                <div class="BScene_slide__gnibx">
+                  <div class="BScene_imgPanel__rZ1xW BScene_educate__cj3A_">
+                    <i class="BScene_tip__gtBLT BScene_tip_cloud__hfaEI">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                    <i class="BScene_tip__gtBLT BScene_tip_subject__lIm_R">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                    <i class="BScene_tip__gtBLT BScene_tip_hand__N5ujJ">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                  </div>
+                  <div class="BScene_contentPanel___z9QN BScene_educateTip__kv3MR">
+                    <h2>智慧教育</h2>
+                    <p>我们为学生平板、智慧校园设备等教育场景，带来输入性能提升，并打造输入全过程的辅导帮助。输入法，也能助力高效学习。</p>
+                    <ul class="BScene_sceneItemList__I6kgv">
+                      <li>校方/家长云管控 </li>
+                      <li>学科词库 </li>
+                      <li>手写公式识别 </li>
+                      <li>手写打分</li>
+                      <li>拍照翻译</li>
+                      <li>英文口语纠正</li>
+                      <li>屏蔽脏话纯净联想</li>
+                      <li>图片转文字</li>
+                    </ul>
+                    <div class="BScene_logoWrapper__b0Z7g">
+                      <i class="BScene_logo__fCkSc BScene_bbk__zJfQw"></i>
+                      <i class="BScene_logo__fCkSc BScene_youxuepai__Y8g2u"></i>
+                      <i class="BScene_logo__fCkSc BScene_dushulang__Pg_IC"></i>
+                      <i class="BScene_logo__fCkSc BScene_seevo__tkdYT"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-swiper-slide-index="2">
+                <div class="BScene_slide__gnibx">
+                  <div class="BScene_imgPanel__rZ1xW BScene_IOT__fBuMl">
+                    <i class="BScene_tip__gtBLT BScene_tip_adaptation__gR8__">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                    <i class="BScene_tip__gtBLT BScene_tip_custom__rsewr">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                  </div>
+                  <div class="BScene_contentPanel___z9QN BScene_IOTTip__M6cId">
+                    <h2>智能家居</h2>
+                    <p>搜狗输入法在诸如电视、冰箱、音响等不同家居产品上，都能提供品质输入，并且满足企业定制化需求，输入更好更互联。</p>
+                    <ul class="BScene_sceneItemList__I6kgv">
+                      <li>适配厂商遥控语音</li>
+                      <li>定制键盘布局</li>
+                      <li>词库联想专属升级</li>
+                    </ul>
+                    <div class="BScene_logoWrapper__b0Z7g">
+                      <i class="BScene_logo__fCkSc BScene_xiaomi__wDTtY"></i>
+                      <i class="BScene_logo__fCkSc BScene_hisense__mNxP9"></i>
+                      <i class="BScene_logo__fCkSc BScene_midea__LwumY"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-swiper-slide-index="3">
+                <div class="BScene_slide__gnibx">
+                  <div class="BScene_imgPanel__rZ1xW BScene_travel__eyvxi">
+                    <i class="BScene_tip__gtBLT BScene_tip_car__M3Sml">
+                      <i class="BScene_spark__RLork">
+
+                      </i>
+                    </i>
+                    <i class="BScene_tip__gtBLT BScene_tip_quickReply__ZKYKu">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                  </div>
+                  <div class="BScene_contentPanel___z9QN BScene_travelTip__HNr4n">
+                    <h2>移动出行</h2>
+                    <p>搜狗输入法能为智能汽车的屏幕输入、语音交互提供高质能力，也能为电动车等提供复杂环境下的语音识别和输入，车流喧嚣，输入依然清晰。</p>
+                    <ul class="BScene_sceneItemList__I6kgv">
+                      <li>车载语音输入法</li>
+                      <li>定制快捷回复</li>
+                      <li>按键防误触</li>
+                      <li>皮肤词库专属定制</li>
+                    </ul>
+                    <div class="BScene_logoWrapper__b0Z7g">
+                      <i class="BScene_logo__fCkSc BScene_weilai__4QLo0">
+
+                      </i>
+                      <i class="BScene_logo__fCkSc BScene_byd__WQLPi"></i>
+                      <i class="BScene_logo__fCkSc BScene_xiaopeng__8zdsd"></i>
+                      <i class="BScene_logo__fCkSc BScene_dongfeng__4_0kn"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-swiper-slide-index="4">
+                <div class="BScene_slide__gnibx">
+                  <div class="BScene_imgPanel__rZ1xW BScene_wear__qjoqc">
+                    <i class="BScene_tip__gtBLT BScene_tip_smallScreen__F6s9G">
+                      <i class="BScene_spark__RLork">
+
+                      </i>
+                    </i>
+                    <i class="BScene_tip__gtBLT BScene_tip_fullScreenWrite__swl5X">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                    <i class="BScene_tip__gtBLT BScene_tip_allInOne__bX8vx">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                  </div>
+                  <div class="BScene_contentPanel___z9QN BScene_wearTip__i4C9Z">
+                    <h2>智能穿戴</h2>
+                    <p>针对智能穿戴产品屏幕小、按键输入困难等痛点，搜狗输入法提供全方位的AI解决方案，让用户动静输入皆便利。</p>
+                    <ul class="BScene_sceneItemList__I6kgv">
+                      <li>专属小屏交互</li>
+                      <li>创新手势操作</li>
+                      <li>AI语音输入</li>
+                      <li>多合一穿戴键盘</li>
+                      <li>全屏手写</li>
+                    </ul>
+                    <div class="BScene_logoWrapper__b0Z7g">
+                      <i class="BScene_logo__fCkSc BScene_oppo__Uai_Y"></i>
+                      <i class="BScene_logo__fCkSc BScene_xiaomi__wDTtY"></i>
+                      <i class="BScene_logo__fCkSc BScene_pico__A9BXq"></i>
+                      <i class="BScene_logo__fCkSc BScene_meizu__4etxQ"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-swiper-slide-index="5">
+                <div class="BScene_slide__gnibx">
+                  <div class="BScene_imgPanel__rZ1xW BScene_entertainment__sJ_3o">
+                    <i class="BScene_tip__gtBLT BScene_tip_customKeyboardLayout__QjrnD">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                    <i class="BScene_tip__gtBLT BScene_tip_voice__C7ISC">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                  </div>
+                  <div class="BScene_contentPanel___z9QN BScene_entertainmentTip__pwH9A">
+                    <h2>娱乐健身</h2>
+                    <p>无论是VR游戏，还是直播或运动类APP，搜狗输入法以核心技术完美解决运动输入难题，让用户运动娱乐不间断</p>
+                    <ul class="BScene_sceneItemList__I6kgv">
+                      <li>定制键盘布局 </li>
+                      <li>一键语音发弹幕  </li>
+                      <li>专属运动键盘</li>
+                      <li>运动场景智能纠错</li>
+                      <li>动感皮肤</li>
+                      <li>VR输入规范制定者 </li>
+                      <li>6种输入支持（语音/拼音/手写/数字/符号/表情）</li>
+                    </ul>
+                    <div class="BScene_logoWrapper__b0Z7g">
+                      <i class="BScene_logo__fCkSc BScene_keep__Us9_s"></i>
+                      <i class="BScene_logo__fCkSc BScene_xiaomi__wDTtY"></i>
+                      <i class="BScene_logo__fCkSc BScene_haier__5Oety"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-swiper-slide-index="6">
+                <div class="BScene_slide__gnibx">
+                  <div class="BScene_imgPanel__rZ1xW BScene_finance__llyCl">
+                    <i class="BScene_tip__gtBLT BScene_tip_financialScene__PAmFo">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                    <i class="BScene_tip__gtBLT BScene_tip_fullSize__V0lWj">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                  </div>
+                  <div class="BScene_contentPanel___z9QN BScene_financeTip__IXmeA">
+                    <h2>智慧金融</h2>
+                    <p>搜狗输入法针对金融行业和用户输入需求，打造更高安全级别，更多常用输入内置的输入法。钱更安全，信息更保密。</p>
+                    <ul class="BScene_sceneItemList__I6kgv">
+                      <li>金融场景智慧联想</li>
+                      <li>本地化安全部署</li>
+                      <li>全尺寸分辨率兼容</li>
+                      <li>企业品牌植入</li>
+                    </ul>
+                    <div class="BScene_logoWrapper__b0Z7g">
+                      <i class="BScene_logo__fCkSc BScene_cmb__TGUTp"></i>
+                      <i class="BScene_logo__fCkSc BScene_boc__P_v8H"></i>
+                      <i class="BScene_logo__fCkSc BScene_bob__6qx_j"></i>
+                      <i class="BScene_logo__fCkSc BScene_hxb__yqmWL"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-swiper-slide-index="7">
+                <div class="BScene_slide__gnibx">
+                  <div class="BScene_imgPanel__rZ1xW BScene_a11y__qway_">
+                    <i class="BScene_tip__gtBLT BScene_tip_suitableForAging__QZ5lB">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                    <i class="BScene_tip__gtBLT BScene_tip_mutualConversion__YODzS">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                  </div>
+                  <div class="BScene_contentPanel___z9QN BScene_a11yTip__lZvVY">
+                    <h2>无障碍</h2>
+                    <p>搜狗输入法多年钻研老龄、视障、肢障需求，打造长辈模式、视障模式、点点输入（脚部鼠标操作）等能力，可适配多种设备，助厂商符合国标，助用户无碍输入。</p>
+                    <ul class="BScene_sceneItemList__I6kgv">
+                      <li>眼动输入能力开放</li>
+                      <li>界面精简字体放大</li>
+                      <li>手写笔迹加粗</li>
+                      <li>方言精准识别</li>
+                      <li>读屏适配</li>
+                      <li>语音文字互转技术</li>
+                      <li>鼠标输入解决方案</li>
+                    </ul>
+                    <div class="BScene_logoWrapper__b0Z7g">
+                      <i class="BScene_logo__fCkSc BScene_tobii__u_l6h"></i>
+                      <i class="BScene_logo__fCkSc BScene_zhengdu__UxVE8"></i>
+                      <i class="BScene_logo__fCkSc BScene_nvda__QrdEO"></i>
+                      <i class="BScene_logo__fCkSc BScene_yangguang__ckmSX"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0">
+                <div class="BScene_slide__gnibx">
+                  <div class="BScene_imgPanel__rZ1xW BScene_work__Zozgx">
+                    <i class="BScene_tip__gtBLT BScene_tip_company__YEzz5">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                    <i class="BScene_tip__gtBLT BScene_tip_thesaurus__msMQR">
+                      <i class="BScene_spark__RLork"></i>
+                    </i>
+                  </div>
+                  <div class="BScene_contentPanel___z9QN BScene_workTip__QEc3t">
+                    <h2>智能办公</h2>
+                    <p>针对智能办公场景，完美适配PC、Pad、会议大屏等智能办公终端。根据企业定制需求，打造企业专属词库，植入文化宣导，助力组织效率提升。</p>
+                    <ul class="BScene_sceneItemList__I6kgv">
+                      <li>公司级安全加密</li>
+                      <li>企业专属词库</li>
+                      <li>企业键盘皮肤</li>
+                      <li>9种键盘样式可选</li>
+                      <li>大小屏全支持</li>
+                    </ul>
+                    <div class="BScene_logoWrapper__b0Z7g">
+                      <i class="BScene_logo__fCkSc BScene_lenovo__ry1Kn"></i>
+                      <i class="BScene_logo__fCkSc BScene_philips__Q8aSe"></i>
+                      <i class="BScene_logo__fCkSc BScene_hisense__mNxP9"></i>
+                      <i class="BScene_logo__fCkSc BScene_seevo__tkdYT"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="case_wrapper__HNe0O">
+      <div class="case_content__d5B1K">
+        <h1 class="case_title__53Ye4">更多优秀案例</h1>
+        <div class="case_sceneSwiper__Rq8P_">
+          <div class="case_navigationWrapper__wp8Bj">
+            <div class="swiper case_swiper__zRZ8g">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide case_slide__SxUUR">
+                  <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+                    <span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
+                      <img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27260%27%20height=%27195%27/%3e"/>
+                    </span>
+                    <img alt="眼动输入法！搜狗输入法和tobii眼动仪创新合作" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="intrinsic" class="case_caseImages__UWsfG" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"/>
+                    <noscript>
+                      <img alt="眼动输入法！搜狗输入法和tobii眼动仪创新合作" srcSet="_next/tobii.png 1x, _next/tobii.png 2x" src="_next/tobii.png" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" class="case_caseImages__UWsfG" loading="lazy"/>
+                    </noscript>
+                  </span>
+                  <a class="case_link__PLoLC" href="https://mp.weixin.qq.com/s/VvqHUJf4X-24y8PBc7_zWQ" target="_blank" rel="noreferrer">
+                    <span>眼动输入法！搜狗输入法和tobii眼动仪创新合作<!-- -->...</span>
+                    <span class="case_more__LakMQ">了解更多</span>
+                  </a>
+                  <i class="case_logo__GmxuP case_tobiiLogo__p8A3c"></i>
+                </div>
+                <div class="swiper-slide case_slide__SxUUR">
+                  <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+                    <span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
+                      <img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27260%27%20height=%27195%27/%3e"/>
+                    </span>
+                    <img alt="腾讯电脑管家应用企业定制输入法，办公更高效" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="intrinsic" class="case_caseImages__UWsfG" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"/>
+                    <noscript>
+                      <img alt="腾讯电脑管家应用企业定制输入法，办公更高效" srcSet="_next/guanjia.png 1x, _next/guanjia.png 2x" src="_next/guanjia.png" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" class="case_caseImages__UWsfG" loading="lazy"/>
+                    </noscript>
+                  </span>
+                  <a class="case_link__PLoLC" href="https://www.pcpop.com/article/6546224.shtml" target="_blank" rel="noreferrer">
+                    <span>腾讯电脑管家应用企业定制输入法，办公更高效<!-- -->...</span>
+                    <span class="case_more__LakMQ">了解更多</span>
+                  </a>
+                  <i class="case_logo__GmxuP case_guanjiaLogo__B_QZ8"></i>
+                </div>
+                <div class="swiper-slide case_slide__SxUUR">
+                  <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+                    <span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
+                      <img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27260%27%20height=%27195%27/%3e"/>
+                    </span>
+                    <img alt="小米MIUI上线更好用的搜狗输入法长辈模式" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="intrinsic" class="case_caseImages__UWsfG" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"/>
+                    <noscript>
+                      <img alt="小米MIUI上线更好用的搜狗输入法长辈模式" srcSet="_next/xiaomi.png 1x, _next/xiaomi.png 2x" src="_next/xiaomi.png" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" class="case_caseImages__UWsfG" loading="lazy"/>
+                    </noscript>
+                  </span>
+                  <a class="case_link__PLoLC" href="http://www.techweb.com.cn/news/2021-05-10/2838774.shtml" target="_blank" rel="noreferrer">
+                    <span>小米MIUI上线更好用的搜狗输入法长辈模式<!-- -->...</span>
+                    <span class="case_more__LakMQ">了解更多</span>
+                  </a>
+                  <i class="case_logo__GmxuP case_xiaomiLogo__uBJhc"></i>
+                </div>
+                <div class="swiper-slide case_slide__SxUUR">
+                  <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+                    <span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
+                      <img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27260%27%20height=%27195%27/%3e"/>
+                    </span>
+                    <img alt="全新语音交互的Keep运动单车，很酷更好用" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="intrinsic" class="case_caseImages__UWsfG" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"/>
+                    <noscript>
+                      <img alt="全新语音交互的Keep运动单车，很酷更好用" srcSet="_next/keep.png 1x, _next/keep.png 2x" src="_next/keep.png" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" class="case_caseImages__UWsfG" loading="lazy"/>
+                    </noscript>
+                  </span>
+                  <a class="case_link__PLoLC" href="http://mo.techweb.com.cn/phone/2021-04-26/2836957.shtml" target="_blank" rel="noreferrer">
+                    <span>全新语音交互的Keep运动单车，很酷更好用<!-- -->...</span>
+                    <span class="case_more__LakMQ">了解更多</span>
+                  </a>
+                  <i class="case_logo__GmxuP case_keepLogo__CLGXC"></i>
+                </div>
+                <div class="swiper-slide case_slide__SxUUR">
+                  <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+                    <span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
+                      <img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27260%27%20height=%27195%27/%3e"/>
+                    </span>
+                    <img alt="搜狗输入法智能助手，在小米手机生根开花" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="intrinsic" class="case_caseImages__UWsfG" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"/>
+                    <noscript>
+                      <img alt="搜狗输入法智能助手，在小米手机生根开花" srcSet="_next/AI.png 1x, _next/AI.png 2x" src="_next/AI.png" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" class="case_caseImages__UWsfG" loading="lazy"/>
+                    </noscript>
+                  </span>
+                  <a class="case_link__PLoLC" href="https://pcedu.pconline.com.cn/1435/14356384.html" target="_blank" rel="noreferrer">
+                    <span>搜狗输入法智能助手，在小米手机生根开花<!-- -->...</span>
+                    <span class="case_more__LakMQ">了解更多</span>
+                  </a>
+                  <i class="case_logo__GmxuP case_xiaomiLogo__uBJhc"></i>
+                </div>
+                <div class="swiper-slide case_slide__SxUUR">
+                  <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+                    <span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
+                      <img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27260%27%20height=%27195%27/%3e"/>
+                    </span>
+                    <img alt="搜狗输入法与金山WPS联合放了个大招" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" decoding="async" data-nimg="intrinsic" class="case_caseImages__UWsfG" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"/>
+                    <noscript>
+                      <img alt="搜狗输入法与金山WPS联合放了个大招" srcSet="_next/wps.png 1x, _next/wps.png 2x" src="_next/wps.png" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" class="case_caseImages__UWsfG" loading="lazy"/>
+                    </noscript>
+                  </span>
+                  <a class="case_link__PLoLC" href="http://www.techweb.com.cn/it/2020-10-20/2807652.shtml" target="_blank" rel="noreferrer">
+                    <span>搜狗输入法与金山WPS联合放了个大招<!-- -->...</span>
+                    <span class="case_more__LakMQ">了解更多</span>
+                  </a>
+                  <i class="case_logo__GmxuP case_wpsLogo__RyVF7"></i>
+                </div>
+              </div>
+            </div>
+            <div class="case_elWrapper___8rba">
+              <div class="case_prevEl__32yBS">
+                <i></i>
+              </div>
+              <div class="case_nextEl__JvgfB">
+                <i></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="concatUs_wrapper__3_EEo">
+      <div class="concatUs_content__Z5q5o">
+        <a class="concatUs_text__HLcDo" target="_blank" rel="noreferrer" href="feedback.html">联系我们合作</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer_footerWrapper__mUJqZ">
+    <div class="footer_content__4nKHe">
+      <div class="footer_info__GTNkK">
+        <div class="footer_logo__bdKuC">
+          <i></i>
+        </div>
+        <div class="footer_infoContent__wC5Md">
+          <div class="footer_business__HjGoi">
+            <p>商务合作咨询</p>
+            <p>合作邮箱: <a href="mailto:"></a></p>
+          </div>
+          <div class="footer_qa__y6pzK">
+            <p>问题反馈&amp;建议</p>
+            <p>联系邮箱: <a href="mailto:IMETS@tencent.com">IMETS@tencent.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="footer_qrCode__itUfP">
+          <div class="footer_weixin__co_64">
+            <i></i>
+            <span>输入法公众号</span>
+          </div>
+          <div class="footer_weibo__ZYN_o">
+            <i></i>
+            <span>官方微博</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer_copyright__r9hNs">
+        <span>© <!-- -->2023<!-- --> sougou.COM 京ICP备11001839号-1</span>
+        <a target="_blank" href="htt://shouji.sougou.com/wap/htmls/privacy_policy_new.html" rel="noreferrer">服务协议</a>
+        <span>|</span>
+        <a target="_blank" href="ht://corp.sougou.com/private.html#private-zh" rel="noreferrer">隐私政策</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script id="__NEXT_DATA__" type="application/json">
+  {"props":
+  {"pageProps":
+  {"data":
+  {"linux":
+  
+  [{"title":"deb格式","subtitle":"适配系统：UOS、银河麒麟、中科方德、龙芯、Ubuntu、Ukylin、Deepin","packList":
+  [{"name":"x86_64","link":"https://ime-sec.getimg.com/202304072111/5ed77b2e89b783b5fb6da3b4b31a5558/pc/dl/gzindex/1680521603/sougoupinyin_4.2.1.145_amd64.deb","iconId":4},
+  {"name":"arm64","link":"https://ime-sec.getimg.com/202304072111/3b742a9ee0598fb2c1ad8c949311e3a2/pc/dl/gzindex/1680521473/sougoupinyin_4.2.1.145_arm64.deb","iconId":5},
+  {"name":"mips64el","link":"https://ime-sec.getimg.com/202304072111/a7f51ac46304c45a3a62d3e2d8d7dade/pc/dl/gzindex/1680521156/sougoupinyin_4.2.1.145_mips64el.deb","iconId":6},
+  {"name":"loongarch64","link":"https://ime-sec.getimg.com/202304072111/23d54aff2984904d5fe19140d9b3f481/pc/dl/gzindex/1680521801/sougoupinyin_4.2.1.145_loongarch64.deb","iconId":7}]
+  }],
+  
+  "android":{"link":"https://shouji.sougou.com/wap/","qrImage":"https://ife.getimg.com/public/wap_qr.png","name":"android"},
+  "ios":{"link":"https://shouji.sougou.com/wap/","qrImage":"https://ife.getimg.com/public/wap_qr.png","name":"ios"},
+  "macOS":{"link":"https://ime-sec.getimg.com/202304072111/bc8a1303bdcc0d87a999f0e327f8923f/pc/dl/gzindex/1679302101/sougou_mac_guanwang_614c.zip","name":"macOS"},
+  "windows":{"link":"https://ime-sec.getimg.com/202304072111/93918f3c33cd54ae1829480b189d19ca/pc/build/_sougou_pinyin_[release_phrases_13_3_c]_13.3.0.7048_1111.exe","name":"windows"},
+  "harmony":{"link":"https://ime-sec.getimg.com/202304072111/8ba13f4923ceeec02856404db951e857/pc/dl/gzindex/1673505361/sougou-input-harmonyOS-guanwang-20230112.hap","name":"harmonyOS"},
+  "doctor":{"link":"https://ime-sec.getimg.com/202304072111/2836cfe490c68b0f20b2da5f82eac7e0/pc/dl/index/1537348926/sougou_yisheng_11a.exe","name":"doctor"},
+  "WuBiMacOS":{"link":"https://ime-sec.getimg.com/202304072111/9402fa1a6be9367192e06c3f686517bb/pc/dl/gzindex/1672234906/sougouwubi_mac_guanwang_140.zip","name":"WuBiMac"},
+  "WuBiWindows":{"link":"https://ime-sec.getimg.com/202304072111/f71e1b9157502791436d687b99676678/pc/dl/gzindex/1669814472/sougou_wubi_55d.exe","name":"WuBiWindows"}
+      
+  }
+  },
+  "__N_SSP":true},
+  "page":"/","query":{},"buildId":"WiSL1ZTQaJGfU32Yrmw6e","isFallback":false,"gssp":true,"customServer":true,"scriptLoader":[]}
+</script>
+</body>
+</html>
